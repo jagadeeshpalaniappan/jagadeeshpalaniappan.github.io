@@ -76,7 +76,7 @@
 }
 
 
-.tm .tm-header h6 span.current {
+.tm .tm-header p span.current {
     background: #199cdb;
     border-radius: 6px;
     -moz-border-radius:6px;
@@ -84,7 +84,8 @@
     -ms-border-radius:6px;
     -o-border-radius: 6px;
     color: #ffffff;
-    padding: 1px 12px;
+    padding: 2px 6px;
+    margin-left: 3px;
 
 }
 
