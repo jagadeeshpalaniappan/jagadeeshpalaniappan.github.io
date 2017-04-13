@@ -1,471 +1,432 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme The Band</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <style>
-  body {
-      font: 400 15px/1.8 Lato, sans-serif;
-      color: #777;
-  }
-  h3, h4 {
-      margin: 10px 0 30px 0;
-      letter-spacing: 10px;      
-      font-size: 20px;
-      color: #111;
-  }
-  .container {
-      padding: 80px 120px;
-  }
-  .person {
-      border: 10px solid transparent;
-      margin-bottom: 25px;
-      width: 80%;
-      height: 80%;
-      opacity: 0.7;
-  }
-  .person:hover {
-      border-color: #f1f1f1;
-  }
-  .carousel-inner img {
-      -webkit-filter: grayscale(90%);
-      filter: grayscale(90%); /* make all photos black and white */ 
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-  }
-  .carousel-caption h3 {
-      color: #fff !important;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-  .bg-1 {
-      background: #2d2d30;
-      color: #bdbdbd;
-  }
-  .bg-1 h3 {color: #fff;}
-  .bg-1 p {font-style: italic;}
-  .list-group-item:first-child {
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
-  }
-  .list-group-item:last-child {
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail p {
-      margin-top: 15px;
-      color: #555;
-  }
-  .btn {
-      padding: 10px 20px;
-      background-color: #333;
-      color: #f1f1f1;
-      border-radius: 0;
-      transition: .2s;
-  }
-  .btn:hover, .btn:focus {
-      border: 1px solid #333;
-      background-color: #fff;
-      color: #000;
-  }
-  .modal-header, h4, .close {
-      background-color: #333;
-      color: #fff !important;
-      text-align: center;
-      font-size: 30px;
-  }
-  .modal-header, .modal-body {
-      padding: 40px 50px;
-  }
-  .nav-tabs li a {
-      color: #777;
-  }
-  #googleMap {
-      width: 100%;
-      height: 400px;
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-  }  
-  .navbar {
-      font-family: Montserrat, sans-serif;
-      margin-bottom: 0;
-      background-color: #2d2d30;
-      border: 0;
-      font-size: 11px !important;
-      letter-spacing: 4px;
-      opacity: 0.9;
-  }
-  .navbar li a, .navbar .navbar-brand { 
-      color: #d5d5d5 !important;
-  }
-  .navbar-nav li a:hover {
-      color: #fff !important;
-  }
-  .navbar-nav li.active a {
-      color: #fff !important;
-      background-color: #29292c !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-  }
-  .open .dropdown-toggle {
-      color: #fff;
-      background-color: #555 !important;
-  }
-  .dropdown-menu li a {
-      color: #000 !important;
-  }
-  .dropdown-menu li a:hover {
-      background-color: red !important;
-  }
-  footer {
-      background-color: #2d2d30;
-      color: #f5f5f5;
-      padding: 32px;
-  }
-  footer a {
-      color: #f5f5f5;
-  }
-  footer a:hover {
-      color: #777;
-      text-decoration: none;
-  }  
-  .form-control {
-      border-radius: 0;
-  }
-  textarea {
-      resize: none;
-  }
-  </style>
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<meta charset="utf-8"/>
+	<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="./assets/img/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage">Jagadeesh</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#myPage">HOME</a></li>
-        <li><a href="#band">Who?</a></li>
-        <li><a href="#tour">title</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Merchandise</a></li>
-            <li><a href="#">Extras</a></li>
-            <li><a href="#">Media</a></li> 
-          </ul>
-        </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-      </ul>
-    </div>
-  </div>
+	<title>Jagadeesh Palaniappan</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
+
+	<!-- CSS Files -->
+	<link href="./assets/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="./assets/css/material-kit.css" rel="stylesheet"/>
+
+	<style>
+		.features {
+			padding: 0;
+		}
+
+	</style>
+
+</head>
+
+<body class="profile-page">
+
+
+<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll navbar-info">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">Jagadeesh Palaniappan</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navigation-example">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="#" target="_blank">
+						<i class="fa fa-cloud-download"></i> Download My Resume
+					</a>
+				</li>
+
+
+				<li>
+					<a href="tel:+14085335628" class="btn btn-simple btn-white btn-just-icon">
+						<i class="fa fa-phone"></i>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://github.com/jagadeeshtechgeek" target="_blank"
+					   class="btn btn-simple btn-white btn-just-icon">
+						<i class="fa fa-github"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/CreativeTim" target="_blank"
+					   class="btn btn-simple btn-white btn-just-icon">
+						<i class="fa fa-facebook-square"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/jagtechgeek" target="_blank"
+					   class="btn btn-simple btn-white btn-just-icon">
+						<i class="fa fa-twitter"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+<div class="wrapper">
+	<div class="header header-filter" style="background-image: url('./assets/img/examples/city.jpg');"></div>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="ny.jpg" alt="New York" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>San Jose</h3>
-          <p>The atmosphere in New York is lorem ipsum.</p>
-        </div>      
-      </div>
+	<div class="main main-raised">
+		<div class="profile-content">
+			<div class="container">
+				<div class="row">
+					<div class="profile">
+						<div class="avatar">
+							<img src="./assets/img/jag/2.jpg" alt="Jagadeesh"
+								 class="img-circle img-responsive img-raised">
+						</div>
+						<div class="name">
+							<h3 class="title">Jagadeesh Palaniappan</h3>
+							<h6>Senior Software Engineer</h6>
 
-      <div class="item">
-        <img src="chicago.jpg" alt="Chicago" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>Sunnyvale</h3>
-          <p>Thank you, Chicago - A night we won't forget.</p>
-        </div>      
-      </div>
-    
-      <div class="item">
-        <img src="la.jpg" alt="Los Angeles" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>LA</h3>
-          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
-        </div>      
-      </div>
-    </div>
+							<p>California, US</p>
+						</div>
+					</div>
+				</div>
+				<div class="description text-center">
+					<p>Tech Geek : An artist of considerable range, Chet Faker — the name taken by Melbourne-raised,
+						Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a
+						warm, intimate feel with a solid groove structure. </p>
+				</div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="profile-tabs">
+							<div class="nav-align-center">
+
+
+								<ul class="nav nav-pills nav-pills-info" role="tablist">
+									<li class="active">
+										<a href="#work" role="tab" data-toggle="tab">
+											<i class="material-icons">work</i>
+											Work
+										</a>
+									</li>
+									<li>
+										<a href="#study" role="tab" data-toggle="tab">
+											<i class="material-icons">school</i>
+											Study
+										</a>
+									</li>
+									<li>
+										<a href="#personal" role="tab" data-toggle="tab">
+											<i class="material-icons">face</i>
+											Personal
+										</a>
+									</li>
+								</ul>
+
+
+								<div class="tab-content gallery">
+
+
+									<div class="tab-pane active" id="work">
+
+
+										<div class="section section-landing text-left">
+
+											<h2>Tech Skills :</h2>
+
+											<div class="features">
+
+												<h3>Java</h3>
+
+												<div class="row">
+													<div class="col-md-1">
+														<img src="./assets/img/jag/java11.png" class="img-rounded"/>
+													</div>
+													<div class="col-md-1">
+														<img src="./assets/img/jag/javaee.png" class="img-rounded"/>
+													</div>
+
+													<div class="col-md-1">
+														<img src="./assets/img/jag/jsp.png" class="img-rounded"/>
+													</div>
+													<div class="col-md-1">
+														<img src="./assets/img/jag/spring.png" class="img-rounded"/>
+													</div>
+												</div>
+
+
+												<h3>JavaScript</h3>
+
+												<div class="row">
+													<div class="col-md-1">
+														<img src="./assets/img/jag/nodejs.png" class="img-rounded"/>
+													</div>
+													<div class="col-md-1">
+														<img src="./assets/img/jag/express.png" class="img-rounded"/>
+													</div>
+
+													<div class="col-md-1">
+														<img src="./assets/img/jag/angularjs.png" class="img-rounded"/>
+													</div>
+													<div class="col-md-1">
+														<img src="./assets/img/jag/jquery.png" class="img-rounded"/>
+													</div>
+
+													<div class="col-md-1">
+														<img src="./assets/img/jag/mean.png" class="img-rounded"/>
+													</div>
+													<div class="col-md-1">
+														<img src="./assets/img/jag/nodejs.png" class="img-rounded"/>
+													</div>
+
+													<div class="col-md-1">
+														<img src="./assets/img/jag/nodejs.png" class="img-rounded"/>
+													</div>
+													<div class="col-md-1">
+														<img src="./assets/img/jag/nodejs.png" class="img-rounded"/>
+													</div>
+												</div>
+
+
+												<h3>Database</h3>
+
+												<div class="row">
+													<div class="col-md-1">
+														<img src="./assets/img/jag/oracle.png" class="img-rounded"/>
+													</div>
+													<div class="col-md-1">
+														<img src="./assets/img/jag/mongodb.png" class="img-rounded"/>
+													</div>
+
+													<div class="col-md-1">
+														<img src="./assets/img/jag/mysql.png" class="img-rounded"/>
+													</div>
+												</div>
+
+
+												<!--
+                                                                                <div class="info">
+
+
+
+                                                                                    <h4 class="info-title">Node.js</h4>
+                                                                                    <p>MEAN Stack, Mongo DB, Express, Angular, Node.js JavaScript Bootstrap HTML5 CSS3</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-1">
+                                                                                <div class="info">
+                                                                                    <div class="icon">
+                                                                                        <img src="./assets/img/jag/nodejs.png" class="img-rounded" />
+                                                                                    </div>
+                                                                                    <h4 class="info-title">Java</h4>
+                                                                                    <p>Java, Java EE, Spring MVC, JSP, Oracle, </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-1">
+                                                                                <div class="info">
+                                                                                    <div class="icon">
+                                                                                        <img src="./assets/img/jag/nodejs.png" class="img-rounded" />
+                                                                                    </div>
+                                                                                    <h4 class="info-title">Spring</h4>
+                                                                                    <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            -->
+											</div>
+										</div>
+
+
+										<div class="row">
+											<div class="col-md-6">
+
+												<div class="card">
+													<div class="header header-success" style="height:auto">
+														GE Digital
+													</div>
+													<div class="content">
+														<div class="text-center">
+															<p> I will be the leader of a company that ends up being
+																worth billions of dollars, because I got the answers. I
+																understand culture. I am the nucleus. I think that’s a
+																responsibility that I have, to push possibilities, to
+																show people, this is the level that things could be at.
+																I think that’s a responsibility that I have, to push
+																possibilities, to show people, this is the level that
+																things could be at. </p>
+
+														</div>
+													</div>
+												</div>
+
+
+											</div>
+											<div class="col-md-6">
+
+												<div class="card">
+													<div class="header header-info" style="height:auto">
+														Tech Mahindra
+													</div>
+													<div class="content">
+														<div class="text-center">
+															<p> I will be the leader of a company that ends up being
+																worth billions of dollars, because I got the answers. I
+																understand culture. I am the nucleus. I think that’s a
+																responsibility that I have, to push possibilities, to
+																show people, this is the level that things could be at.
+																I think that’s a responsibility that I have, to push
+																possibilities, to show people, this is the level that
+																things could be at. </p>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+
+
+									<div class="tab-pane text-center" id="study">
+										<div class="row">
+											<div class="col-md-6">
+
+												<div class="card">
+													<div class="header header-info" style="height:auto">
+														BITS Pillani
+													</div>
+													<div class="content">
+														<div class="text-center">
+															<h5>M.S. (Software Engineering)</h5>
+
+															<p> I will be the leader of a company that ends up being
+																worth
+																billions of dollars, because I got the answers. I
+																understand
+																culture. I am the nucleus. I think that’s a
+																responsibility
+																that I have, to push possibilities, to show people, this
+																is
+																the level that things could be at. I think that’s a
+																responsibility that I have, to push possibilities, to
+																show
+																people, this is the level that things could be at. </p>
+
+														</div>
+													</div>
+												</div>
+
+											</div>
+											<div class="col-md-6">
+
+												<div class="card">
+													<div class="header header-info" style="height:auto">
+														SASTRA University
+													</div>
+													<div class="content">
+														<div class="text-center">
+															<h5>B.Tech (Information Technology)</h5>
+
+															<p> I will be the leader of a company that ends up being
+																worth
+																billions of dollars, because I got the answers. I
+																understand
+																culture. I am the nucleus. I think that’s a
+																responsibility
+																that I have, to push possibilities, to show people, this
+																is
+																the level that things could be at. I think that’s a
+																responsibility that I have, to push possibilities, to
+																show
+																people, this is the level that things could be at. </p>
+
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane text-center" id="personal">
+										<div class="row">
+											<div class="col-md-6">
+												<img src="./assets/img/jag/3.jpg" class="img-rounded"/>
+												<img src="./assets/img/jag/1.jpg" class="img-rounded"/>
+											</div>
+											<div class="col-md-6">
+												<img src="./assets/img/jag/2.jpg" class="img-rounded"/>
+												<img src="./assets/img/jag/3.jpg" class="img-rounded"/>
+												<img src="./assets/img/jag/1.jpg" class="img-rounded"/>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- End Profile Tabs -->
+				</div>
+			</div>
+
+		</div>
+	</div>
 </div>
 
-<!-- Container (The Band Section) -->
-<div id="band" class="container text-center">
-  <h3>THE BAND</h3>
-  <p><em>We love music!</em></p>
-  <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
-      <a href="#demo" data-toggle="collapse">
-        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo" class="collapse">
-        <p>Guitarist and Lead Vocalist</p>
-        <p>Loves long walks on the beach</p>
-        <p>Member since 1988</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
-      <a href="#demo2" data-toggle="collapse">
-        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo2" class="collapse">
-        <p>Drummer</p>
-        <p>Loves drummin'</p>
-        <p>Member since 1988</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
-      <a href="#demo3" data-toggle="collapse">
-        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo3" class="collapse">
-        <p>Bass player</p>
-        <p>Loves math</p>
-        <p>Member since 2005</p>
-      </div>
-    </div>
-  </div>
 </div>
-
-<!-- Container (TOUR Section) -->
-<div id="tour" class="bg-1">
-  <div class="container">
-    <h3 class="text-center">TOUR DATES</h3>
-    <p class="text-center">Lorem ipsum we'll play you some music.<br> Remember to book your tickets!</p>
-    <ul class="list-group">
-      <li class="list-group-item">September <span class="label label-danger">Sold Out!</span></li>
-      <li class="list-group-item">October <span class="label label-danger">Sold Out!</span></li> 
-      <li class="list-group-item">November <span class="badge">3</span></li> 
-    </ul>
-    
-    <div class="row text-center">
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="paris.jpg" alt="Paris" width="400" height="300">
-          <p><strong>Paris</strong></p>
-          <p>Friday 27 November 2015</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="newyork.jpg" alt="New York" width="400" height="300">
-          <p><strong>New York</strong></p>
-          <p>Saturday 28 November 2015</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
-          <p><strong>San Francisco</strong></p>
-          <p>Sunday 29 November 2015</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
-        </div>
-        <div class="modal-body">
-          <form role="form">
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
-              <input type="number" class="form-control" id="psw" placeholder="How many?">
-            </div>
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-            </div>
-              <button type="submit" class="btn btn-block">Pay 
-                <span class="glyphicon glyphicon-ok"></span>
-              </button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-            <span class="glyphicon glyphicon-remove"></span> Cancel
-          </button>
-          <p>Need <a href="#">help?</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div id="contact" class="container">
-  <h3 class="text-center">Contact</h3>
-  <p class="text-center"><em>We love our fans!</em></p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <p>Fan? Drop a note.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>	   
-    </div>
-    <div class="col-md-8">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-      <br>
-      <div class="row">
-        <div class="col-md-12 form-group">
-          <button class="btn pull-right" type="submit">Send</button>
-        </div>
-      </div>	
-    </div>
-  </div>
-  <br>
-  <h3 class="text-center">From The Blog</h3>  
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Mike</a></li>
-    <li><a data-toggle="tab" href="#menu1">Chandler</a></li>
-    <li><a data-toggle="tab" href="#menu2">Peter</a></li>
-  </ul>
-
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h2>Mike Ross, Manager</h2>
-      <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-      <h2>Chandler Bing, Guitarist</h2>
-      <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h2>Peter Griffin, Bass player</h2>
-      <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
-    </div>
-  </div>
-</div>
-
-<div id="googleMap"></div>
-
-<!-- Add Google Maps -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-var myCenter = new google.maps.LatLng(37.401945, -122.017707);
-
-function initialize() {
-var mapProp = {
-center:myCenter,
-zoom:12,
-scrollwheel:false,
-draggable:false,
-mapTypeId:google.maps.MapTypeId.ROADMAP
-};
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-position:myCenter,
-});
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
-<!-- Footer -->
-<footer class="text-center">
-  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a><br><br>
-  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> 
+<footer class="footer">
+	<div class="container">
+		<nav class="pull-left">
+			<ul>
+				<li>
+					<a href="#">
+						About Us
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Blog
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Licenses
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="copyright pull-right">
+			&copy; 2017, made with <i class="fa fa-heart heart"></i> by Jagadeesh Palaniappan
+		</div>
+	</div>
 </footer>
 
-<script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
-  
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 900, function(){
-   
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-    });
-  });
-})
-</script>
 
 </body>
+<!--   Core JS Files   -->
+<script src="./assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="./assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="./assets/js/material.min.js"></script>
+
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="./assets/js/nouislider.min.js" type="text/javascript"></script>
+
+<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+<script src="./assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+<script src="./assets/js/material-kit.js" type="text/javascript"></script>
+
 </html>
