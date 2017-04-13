@@ -104,3 +104,9 @@
     font-size: 13px;
 }
 
+
+
+.tm .duration {
+    font-size: 0.8em;
+    font-style: italic;
+}
