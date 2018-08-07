@@ -214,3 +214,12 @@
 .card-carousel .item > img {
     margin: 0;
 }
+
+.awards h4 > i {
+    font-size: 1em;
+    margin-left: 5px;   
+}
+
+.awards h4 > i:hover {
+    color: #199cdb;
+}
