@@ -222,4 +222,5 @@
 
 .awards h4 > i:hover {
     color: #199cdb;
+    cursor: pointer;
 }
