@@ -18,7 +18,7 @@
 .timeline {
     padding: 10px 30px 46px;
     margin-top: 20px;
-    min-height: 440px;
+    min-height: 513px;
 }
 
 
@@ -116,6 +116,10 @@
 
 .skills h6 {
     text-align: center;
+}
+
+.skills .btn {
+    text-transform: none;
 }
 
 
